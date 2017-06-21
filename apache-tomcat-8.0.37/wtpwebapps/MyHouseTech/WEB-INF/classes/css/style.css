@@ -1,0 +1,335 @@
+/***********************************/
+/* style.css          			     */
+/* Author: Gabriel Andrade		     */
+/* Date: 2016-09-27				     */
+/***********************************/
+
+header {
+	padding:0 0 30px 0;
+}
+ 
+body {
+	background: url("../images/background/background.jpg") no-repeat center center fixed; ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color:#FFFFFF;
+	height: 100%;
+}
+
+footer {
+	text-align:center;
+	bottom: 0;
+}
+
+footer p {
+   color: #fff;
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 25px;
+}
+
+/***********************************/
+/*              Util               */
+/***********************************/
+
+.fLeft {float:left;}
+.fRigth {float:rigth;}
+.clear {clear:both;}
+.noPaddin {padding:0 !important;}
+.margin20Bottom {margin-bottom: 20px !important;}
+.margin30Bottom {margin-bottom: 30px !important;}
+
+/***********************************/
+/*              Input              */
+/***********************************/
+
+input[type="text"],  input[type="password"]{
+	border-radius: 5px;
+	width: 100%;
+}
+
+/***********************************/
+/*          Header			       */
+/***********************************/
+
+.userInfo {
+	margin-top: 45px;
+   font-size: 16px;
+}
+
+#header a.logoSite {
+	display: block;
+   background: url(../images/logo.png) no-repeat;
+   width: 375px;
+	height: 75px;
+   overflow: hidden;
+   text-indent: -999px;
+	margin-top: 15px;
+	max-width: 100%;
+}
+
+/***********************************/
+/*           Menu			       */
+/***********************************/
+
+.mainMenu {
+	background-color: rgba(0, 0, 0, 0.21);
+	margin-bottom: 10px;
+}
+
+.mainMenu  ul{
+	padding-left:0;
+}
+
+.mainMenu  ul li {
+	list-style-type: none; 
+	float: left;
+   margin: 0 12px 0 0;
+}
+
+.mainMenu  ul li  a{
+	color: #fff;
+   font-size: 12px;
+   text-transform: uppercase;
+   -webkit-text-stroke: 0;
+   display: block;
+	padding: 10px 8px 0 2px;
+   cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/***********************************/
+/*          Página de erro	        */
+/***********************************/
+    
+.errorList {
+	padding:20px 0;
+}
+
+.errorList  ul {
+	background-color: rgba(0, 0, 0, 0.21);
+   padding: 20px;
+}
+
+.errorList  ul li {
+	list-style-type: none; 
+	padding-bottom: 30px;
+}
+
+.errorList ul li span {
+	font-weight: bold;
+	font-size: 15px;
+}
+    
+/***********************************/
+/*           Area de  Login        */
+/***********************************/
+
+div[role="containerLogin"] { 
+	background-color: rgba(0, 0, 0, 0.21);
+	padding:40px 20px;
+	color:#FFFFFF;
+}
+
+div[role="containerLogin"] input[type='text'], 
+div[role="containerLogin"] input[type='password'] {
+    padding: 5px 40px 5px 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+div[role="containerLogin"] input[id="login"] {
+	background: url(../images/background/person.png) no-repeat 99% 5px;
+}
+
+div[role="containerLogin"] input[id="password"] {
+	background: url(../images/background/lock.png) no-repeat 99% 5px;
+}
+
+/* Botoes */
+.button-row {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btnLogin {
+	padding:10px;
+	background-color:#4C9A39;
+	width:40%;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	float:left;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+.btnLogin:hover {
+	background-color:#376D29;
+	color:#fff;
+}
+
+.reset {
+	padding:10px;
+	background-color:#c0392b;
+	width:55%;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	float:right;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+.reset:hover {
+	background-color:#791F16;
+	color:#fff;	
+}
+
+.btnLogout {
+	background: none;
+	border: none
+}
+
+/***********************************/
+/*           Cadastro        	   */
+/***********************************/
+
+div[role="containerCadastro"] label {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+div[role="containerCadastro"] input[type='text'], 
+div[role="containerCadastro"] input[type='password'] {
+   padding: 5px 40px 5px 10px;
+	border: 1px solid #fff;
+   color: #fff;
+   text-align: left;
+   outline: none;
+   font-size: 18px;
+   border-radius: 5px;
+	background: none no-repeat 99% 5px;
+}
+
+div[role="containerCadastro"] { 
+	background-color: rgba(0, 0, 0, 0.21);
+	padding:40px 20px;
+	color:#FFFFFF;
+}
+
+div[role="containerCadastro"] div#tipoPlano {
+	font-size: 18px;
+	padding-bottom:10px;
+}
+
+/* Botões */
+.btnCadastro {
+	padding:10px;
+	background-color:#4C9A39;
+	width:100%;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	float:left;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+.btnCadastro:hover {
+	background-color:#376D29;
+	color:#fff;
+}
+
+
+/***********************************/
+/*           Area Restrita         */
+/***********************************/
+
+.dispList {
+	padding:20px 0;
+}
+
+.dispList  ul {
+	background-color: rgba(0, 0, 0, 0.21);
+   padding: 20px;
+}
+
+.dispList  ul li {
+	list-style-type: none; 
+	padding-bottom: 30px;
+	display: flex;
+}
+
+.imgLampada {
+	padding-right: 15px;
+}
+
+.infoComponete {
+	width: 70%;
+	position: relative;
+}
+
+/* Bot�es */
+.btnLigar {
+	padding:5px 30px;
+	background-color:#4C9A39;
+	width:auto;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	float:left;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	position: absolute;
+    bottom: 0;
+}
+
+.btnLigar:hover {
+	background-color:#376D29;
+	color:#fff;
+}
+
+.btnDesligar {
+	padding:5px 15px;
+	background-color:#c0392b;
+	width:auto;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	position: absolute;
+   bottom: 0;
+}
+.btnDesligar:hover {
+	background-color:#791F16;
+	color:#fff;	
+}

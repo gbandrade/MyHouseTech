@@ -3,6 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		<% String PERFIL_ADMINISTRADOR = "a18f9ea8068211e7bb070050568d4390";%>
+		<% String PERFIL_GESTOR = "a38ca58a068211e7bb070050568d4390";%>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Cadastro - My House Tech</title>
 		<meta charset="ISO-8859-1">
@@ -24,11 +26,13 @@
 					</div>
 					<div class="col-md-4 hidden-xs userInfo">
 						<form name="form"	method="Post"	action="Logout">
-							Bem vindo(a) 
-							<% Usuario objUsuario = (Usuario) session.getAttribute("objUser"); 
-								out.print(objUsuario.getNome()); 
-							%>
+							 
+							<% Usuario objUsuario = (Usuario) session.getAttribute("objUser"); %>
+							<%	if(objUsuario != null) {%>	
+									Bem vindo(a)
+							<%		out.print(objUsuario.getNome());	%>
 							- <input type="submit" name="Submit" class="btnLogout" value="Sair"/>
+							<%	}%>
 						</form>
 					</div>
 				</div>
@@ -45,6 +49,14 @@
 					<li>
 						<a href="Controle de consumo/" title="Controle de consumo">Controle de consumo</a>
 					</li>
+					<% if(objUsuario != null && (objUsuario.getIdPerfil().equals(PERFIL_ADMINISTRADOR) || objUsuario.getIdPerfil().equals(PERFIL_GESTOR))) {%>
+					<li>
+						<a href="cadastro.jsp" title="Cadastro">Cadastro</a>
+					</li>
+					<li>
+						<a href="usuarios.jsp" title="Cadastro">Usuários</a>
+					</li>
+					<% }%>
 				</ul>
 				<div class="clear"></div>
 			</nav>

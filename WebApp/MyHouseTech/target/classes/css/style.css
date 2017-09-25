@@ -40,6 +40,8 @@ footer p {
 .noPaddin {padding:0 !important;}
 .margin20Bottom {margin-bottom: 20px !important;}
 .margin30Bottom {margin-bottom: 30px !important;}
+.B {font-weight: bold}
+.center {text-align: center;}
 
 /***********************************/
 /*              Input              */
@@ -48,6 +50,16 @@ footer p {
 input[type="text"],  input[type="password"]{
 	border-radius: 5px;
 	width: 100%;
+	padding: 5px 40px 5px 10px;
+   background: none no-repeat 99% 5px;
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: left;
+   outline: none;
+}
+
+input[type="checkbox"] {
+	margin-right: 20px;
 }
 
 /***********************************/
@@ -130,7 +142,7 @@ input[type="text"],  input[type="password"]{
 
 div[role="containerLogin"] { 
 	background-color: rgba(0, 0, 0, 0.21);
-	padding:40px 20px;
+	padding:40px 20px 10px;
 	color:#FFFFFF;
 }
 
@@ -153,10 +165,18 @@ div[role="containerLogin"] input[id="password"] {
 	background: url(../images/background/lock.png) no-repeat 99% 5px;
 }
 
+div[role="containerLogin"] a {
+	color: #FFF;
+	text-decoration: underline;
+	font-size: 13px;
+	
+}
+
 /* Botoes */
 .button-row {
     width: 100%;
     margin-top: 20px;
+    font-size: 13px;
 }
 
 .btnLogin {
@@ -265,6 +285,44 @@ div[role="containerCadastro"] div#tipoPlano {
 /*           Area Restrita         */
 /***********************************/
 
+input[type="text"]#key {
+	border-radius: 5px 0 0 5px;
+	border-right: none;
+	width: 95%;
+	float:left;
+}
+
+input[type="text"][id^="tempMin"],
+input[type="text"][id^="tempMax"] {
+	width: 80%;
+   float: left;
+   padding: 5px 35px;
+}
+
+.addDisp ul{
+	background-color: rgba(0, 0, 0, 0.21);
+   padding: 20px;
+}
+
+.addDisp ul li {
+	list-style-type: none; 
+	display: flex;
+}
+
+.addDisp ul li#likey {
+	padding:20px 0 0;
+}
+
+.addDisp ul li#likey form{
+	width: 100%;
+}
+
+.addDisp ul li div {
+	white-space: nowrap;
+	line-height: 30px;
+	padding-right: 10px;
+}
+
 .dispList {
 	padding:20px 0;
 }
@@ -280,6 +338,13 @@ div[role="containerCadastro"] div#tipoPlano {
 	display: flex;
 }
 
+.dispList ul li#msgNenhumDispositivo {
+	padding: 0;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
 .imgLampada {
 	padding-right: 15px;
 }
@@ -289,8 +354,12 @@ div[role="containerCadastro"] div#tipoPlano {
 	position: relative;
 }
 
+.infoComponete form div {
+	width: 140px;
+}
+
 /* Bot�es */
-.btnLigar {
+.btnLigar, .btnSalvar {
 	padding:5px 30px;
 	background-color:#4C9A39;
 	width:auto;
@@ -308,7 +377,29 @@ div[role="containerCadastro"] div#tipoPlano {
     bottom: 0;
 }
 
-.btnLigar:hover {
+.btnSalvar{
+	position: initial !important;
+	margin-top:20px;
+	padding:5px 15px;
+}
+
+.btnAddDispositvo {
+	padding:5px 30px;
+	background-color:#4C9A39;
+	width:auto;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+   bottom: 0;
+}
+
+.btnLigar:hover, .btnAddDispositvo:hover, .btnAddKey:hover, .btnSalvar:hover{
 	background-color:#376D29;
 	color:#fff;
 }
@@ -329,7 +420,18 @@ div[role="containerCadastro"] div#tipoPlano {
 	position: absolute;
    bottom: 0;
 }
+
 .btnDesligar:hover {
 	background-color:#791F16;
 	color:#fff;	
+}
+
+.btnAddKey {
+	background-color: #4C9A39;
+   border: 1px solid #fff;
+   border-radius: 0 10px 10px 0px;
+   height: 31px;
+   width: 50px;
+   border-left: none;
+	font-size: 20px;
 }

@@ -35,6 +35,9 @@
 							<input type="button" class="reset" 		value="Esqueci a senha">
 							<div class="clear"></div>
 						</div>
+						<div class="button-row center">
+						    <a href="cadastro.jsp">Quero me cadastrar</a>
+						</div>
 					</form>
 					</div>
 				</div>

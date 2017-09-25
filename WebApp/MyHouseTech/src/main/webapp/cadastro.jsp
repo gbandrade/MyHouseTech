@@ -26,11 +26,13 @@
 					</div>
 					<div class="col-md-4 hidden-xs userInfo">
 						<form name="form"	method="Post"	action="Logout">
-							Bem vindo(a) 
-							<% Usuario objUsuario = (Usuario) session.getAttribute("objUser"); 
-								out.print(objUsuario.getNome()); 
-							%>
+							 
+							<% Usuario objUsuario = (Usuario) session.getAttribute("objUser"); %>
+							<%	if(objUsuario != null) {%>	
+									Bem vindo(a)
+							<%		out.print(objUsuario.getNome());	%>
 							- <input type="submit" name="Submit" class="btnLogout" value="Sair"/>
+							<%	}%>
 						</form>
 					</div>
 				</div>
@@ -47,7 +49,7 @@
 					<li>
 						<a href="Controle de consumo/" title="Controle de consumo">Controle de consumo</a>
 					</li>
-					<% if(objUsuario.getIdPerfil().equals(PERFIL_ADMINISTRADOR) || objUsuario.getIdPerfil().equals(PERFIL_GESTOR)) {%>
+					<% if(objUsuario != null && (objUsuario.getIdPerfil().equals(PERFIL_ADMINISTRADOR) || objUsuario.getIdPerfil().equals(PERFIL_GESTOR))) {%>
 					<li>
 						<a href="cadastro.jsp" title="Cadastro">Cadastro</a>
 					</li>

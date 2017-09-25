@@ -9,6 +9,8 @@ public class Dispositivo {
 	private String midArduino;
 	private String midUsuario;
 	private String mstrIp;
+	private Integer	mintTempMin;
+	private Integer	mintTempMax;
 	
 	
 	//============================
@@ -40,16 +42,45 @@ public class Dispositivo {
 		this.mstrIp = strIp;
 	}
 	
+	public Integer getTempMin() {
+		return mintTempMin;
+	}
+	
+	public void setTempMin(Integer intTempMin) {
+		this.mintTempMin = intTempMin;
+	}
+	
+	public Integer getTempMax() {
+		return mintTempMax;
+	}
+	
+	public void setTempMax(Integer intTempMax) {
+		this.mintTempMax = intTempMax;
+	}
+	
+	
 	//============================
 	// Constructor
 	//============================
-	
-	public Dispositivo() {}
+
+	public Dispositivo() {
+		this.mintTempMin = null;
+		this.mintTempMax = null;
+	}
 	
 	public Dispositivo(String strIdDispositivo, String strIdArduino, String strIdUsuario, String strIp) {
 		this.midDispositivo = strIdDispositivo;
 		this.midArduino = strIdArduino;
 		this.midUsuario = strIdUsuario;
 		this.mstrIp = strIp;
+	}
+	
+	public Dispositivo(String strIdDispositivo, String strIdArduino, String strIdUsuario, String strIp, int intTempMin, int intTempMax) {
+		this.midDispositivo = strIdDispositivo;
+		this.midArduino = strIdArduino;
+		this.midUsuario = strIdUsuario;
+		this.mstrIp = strIp;
+		this.mintTempMin = intTempMin;
+		this.mintTempMax = intTempMax;
 	}
 }

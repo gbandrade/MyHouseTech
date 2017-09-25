@@ -137,6 +137,8 @@ public class DispositivoJson extends HttpServlet{
 					objResultado.put("IdArduino", objDispositovo.getIdArduino());
 					objResultado.put("IdUsuario", objDispositovo.getIdUsuario());
 					objResultado.put("Ip", objDispositovo.getIp());
+					objResultado.put("TempMin", objDispositovo.getTempMin());
+					objResultado.put("TempMax", objDispositovo.getTempMax());
 					aobjJson.add(objResultado);
 				}
 				objRetorno.put("Dispositivos", aobjJson);

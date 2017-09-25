@@ -6,6 +6,7 @@ import java.io.StringWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -53,6 +54,7 @@ public class Login extends HttpServlet {
 	        	UsuarioNegocio objUsuNegocio = new UsuarioNegocio();
 	        	if(objUsuNegocio.autentica(login, senha)) {
 	        		session = request.getSession();
+	        		session.setAttribute("userId", objUsuNegocio.getUsuario().get(0).getIdUsuario());
 	        		configSession(objUsuNegocio.getUsuario().get(0), response);
 	        		loggerInfo.info("Usuário " + objUsuNegocio.getUsuario().get(0).getNome() + " logado com sucesso!");
 	        		response.sendRedirect("areaRestrita.jsp");
@@ -95,8 +97,11 @@ public class Login extends HttpServlet {
 		session.setAttribute("objUser", objusuario);
 		session.setMaxInactiveInterval(60 * 15);
 		Cookie userLogin = new Cookie("userLogin", objusuario.getLogin());
+		Cookie userId = new Cookie("userId", objusuario.getIdUsuario());
 		userLogin.setMaxAge(60 * 15);
+		userId.setMaxAge(60 * 15);
 		response.addCookie(userLogin);
+		response.addCookie(userId);
 	}
 	
 	//------------------------------------

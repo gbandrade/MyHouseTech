@@ -14,7 +14,10 @@ public class ErrorController extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse res)    throws ServletException, IOException{
     	Integer statusCode = (Integer) req.getAttribute("javax.servlet.error.status_code");
     	RequestDispatcher requestDispatcher;
-    	req.setAttribute("errorType", (String) req.getAttribute("javax.servlet.error.message"));
+    	if(!req.getAttribute("javax.servlet.error.message").equals(""))
+    		req.setAttribute("errorType", (String) req.getAttribute("javax.servlet.error.message"));
+    	else
+    		req.setAttribute("errorType", (String) req.getAttribute("javax.servlet.error.exception").toString());
         req.setAttribute("statusCode", statusCode);
  
         if(statusCode == 404)

@@ -13,6 +13,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="javascript/script.js"></script>
+		<script src="javascript/dispositivo.js"></script>
 	</head>
 	<body>
 		<!-- Inicio Header -->
@@ -49,6 +50,9 @@
 					<li>
 						<a href="cadastro.jsp" title="Cadastro">Cadastro</a>
 					</li>
+					<li>
+						<a href="usuarios.jsp" title="Cadastro">Usuários</a>
+					</li>
 					<% }%>
 					
 				</ul>
@@ -63,29 +67,45 @@
 					<h2>Seus dispositívos</h2>
 				</div>
 			</div>
+			<div class="row addDisp">
+				<div class="col-xs-12">
+					<ul>
+						<li>
+							<input type="button" class="btnAddDispositvo" value="Adicionar Dispositvo" onclick="showInputKey()">
+						</li>
+						<li id="likey" style="display:none;">
+							<div>Insira a Key:</div>
+							<form name="form"	method="Post"	action="InsereDispositivo">
+								<input id="key" type="text" name="key" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+								<input type="submit" name="Submit" value="+" class="btnAddKey">
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div class="row dispList">
 				<div class="col-xs-12">
 					<ul>
-						<li id="disp1">
-							<div class="fLeft imgLampada">
-								<img src="images/lampOff.png" alt="lamp off" title="lamp off"></img>
-							</div>
-							<div class="fLeft infoComponete">
-								<div>Lampada 1</div>
-								<input type="button" class="btnLigar" value="Ligar" onclick="AlteraRele('disp1', this.value)">
-							</div>
-							<div class="clear"/>
-						</li>
-						<li id="disp2">
-							<div class="fLeft imgLampada">
-								<img src="images/lampOn.png" alt="lamp on" title="lamp on"></img>
-							</div>
-							<div class="fLeft infoComponete">
-								<div>Lampada 2</div>
-								<input type="button" class="btnDesligar" value="Desligar" onclick="AlteraRele('disp2', this.value)">
-							</div>
-							<div class="clear"/>
-						</li>
+<!-- 						<li id="disp1"> -->
+<!-- 							<div class="fLeft imgLampada"> -->
+<!-- 								<img src="images/lampOff.png" alt="lamp off" title="lamp off"></img> -->
+<!-- 							</div> -->
+<!-- 							<div class="fLeft infoComponete"> -->
+<!-- 								<div>Lampada 1</div> -->
+<!-- 								<input type="button" class="btnLigar" value="Ligar" onclick="AlteraRele('disp1', this.value)"> -->
+<!-- 							</div> -->
+<!-- 							<div class="clear"/> -->
+<!-- 						</li> -->
+<!-- 						<li id="disp2"> -->
+<!-- 							<div class="fLeft imgLampada"> -->
+<!-- 								<img src="images/lampOn.png" alt="lamp on" title="lamp on"></img> -->
+<!-- 							</div> -->
+<!-- 							<div class="fLeft infoComponete"> -->
+<!-- 								<div>Lampada 2</div> -->
+<!-- 								<input type="button" class="btnDesligar" value="Desligar" onclick="AlteraRele('disp2', this.value)"> -->
+<!-- 							</div> -->
+<!-- 							<div class="clear"/> -->
+<!-- 						</li> -->
 					</ul>
 				</div>
 			</div>
